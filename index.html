@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Freecycling!</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="index.css">
+</style>
+</head>
+<body>
+  <!--Navigation button -->
+  <nav class="custom-background-colour">
+    <div class="logo-button-container">
+      <img src="logo.png" alt="Logo" class="logo">
+      <button class="w3-button freecycle">Freecycling!</button>
+      <button class = "w3-button nav-buttons">Donate</button>
+      <button class = "w3-button nav-buttons">Shop</button>
+      <button class = "w3-button nav-buttons">Locations</button>
+      <button class = "w3-button nav-buttons">About Us</button>
+      <div class="search-container">
+        <input type="text" placeholder="Search...">
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </div>
+    </div>
+  </nav> 
+  
+  <!--Background image-->
+  <div>
+  <span class="background-image" role="img" aria-label="leafdesign">
+    <div class="fifty-padding"></div>
+    <div class="smoke-background">
+      <div class="row w3-padding-small">
+        <div class="column">
+          <h1 class="w3-text-white join-us"> <span class="custom-complmentry-colour">Sign Up Now </span> <br> to get the best deals!</h1>
+        </div>
+        <div class="column">
+          <h1 class="w3-text-white join-us w3-right-align"> <span class="custom-complmentry-colour">Start Shopping</span></h1>
+          <h3 class="w3-xlarge w3-text-white w3-right-align">Start browsing through free items and Freecycle! <br> Just filter by location or items and you're ready to go!</h3>
+        </div>
+      </div>
+      <!--Buttons-->
+      <div class="row w3-padding-small">
+        <div class="column">
+          <button class="custom-background-colour w3-text-white w3-button w3-xxxlarge button-padding shadow">Log-In</button>
+          <button id='trigger-modal' class="custom-background-colour w3-text-white w3-button w3-xxxlarge button-padding shadow left-margin">Sign up</button>
+          <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <div id="form-ct">
+              <div class="w3-center sign-up-title">
+                <p3>Sign Up</p3>
+              </div>
+              <div id="form-ct">
+              <form>
+              <!-- User details -->
+              <div id="user-details" class="w3-center">
+                <input class="w3-input w3-xlarge input-style" placeholder="Enter first name" id="fName" type="text" required>
+                <input class="w3-input w3-xlarge input-style" placeholder="Enter last name" id="lName" type="text" required>
+                <input class="w3-input w3-xlarge input-style" placeholder="Enter a username" id="userName" type="text" required>
+                <input class="w3-input w3-xlarge input-style" placeholder="Enter password" id="password" type="password" required>
+              </div>
+              <!-- Address details -->
+              <div id="address-details" class="sign-up-padding">
+                <input class="w3-input w3-xlarge input-style" placeholder="Enter your home address" id="hAddress" type="text" required>
+                <input class="w3-input w3-xlarge input-style" placeholder="Enter your work name" id="wAddress" type="text" required>
+              </div>
+              <!-- Contact details -->
+              <div id = contact-details>
+                <input class="w3-input w3-xlarge input-style" placeholder="Enter your phone number" id="phoneNumber" type="tel" required>
+                <input class="w3-input w3-xlarge input-style" placeholder="Enter your email address" id="emailAddress" type="email" required>
+              </div>
+              <!-- Submit button -->
+              <div class="w3-center">
+                <p><br></p>
+                <button class="custom-complmentry-background-colour w3-button horizontal-center w3-xxxlarge signup-button-padding shadow">Submit</button>
+                <a><br><br><br><br><br><br></a>
+              </div>
+              </div>
+              </form>
+            </div>
+            </div>
+          </div>
+        </div>
+        <!--Quiz buttons-->
+        <div class="column  w3-right-align">
+          <button class="custom-background-colour w3-button w3-text-white w3-xxxlarge start-button-padding shadow">Start</button>
+        </div>
+      </div>
+    </div>
+  </span>
+  </div>
+  <div class="w3-padding-small">
+    <div class="row w3-padding-small">
+      <div class="column">
+        <div class="future-padding">
+          <h2 class="w3-xxxlarge">Welcome to <span class="custom-colour">Freecycling!</span></h2>
+          <h4 class="w3-xlarge">We are a grassroots & entirely nonprofit movement of people who are giving and getting stuff for free in their own Towns. It's all about reuse and keeping good stuff out of landfills. Membership is free. And now you can also set up your own, smaller personal Friends Circle for gifting and lending of items with just your 
+            friends! </h4>
+        </div>
+      </div>
+      <div class="column">
+        <div>
+        <div class="row">
+          <div class="column info-padding">
+            <h4 class="w3-xlarge">Why sign up?</h4>
+            <p class="w3-large">Not only can you share items within a friend-circle and earn awards when you donate, you will also get access to the most popular viewed items.</p>
+            </div>
+          <div class="column info-padding">
+            <h4 class="w3-xlarge">Want to donate?</h4>
+            <p class="w3-large">Don't throw away items you don't ant/need anymore. Make someone else's day by donating to freecycling! <span class="custom-colour underline ">Click here to donate!</span> </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="column">
+        <div class="row">
+          <div class="column info-padding">
+            
+            <img id="image" src="table.jpeg" style="width:700px">
+            <p></p>
+            <script>
+            var imageSources = ["table.jpeg", "cabinet.jpeg", "chair.jpeg"]
+            var index = 0;
+            setInterval (function(){
+              if (index === imageSources.length) {
+                index = 0;
+              }
+              document.getElementById("image").src = imageSources[index];
+              index++;
+            } , 2000);
+            </script>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<script src="script.js"></script>
+</body>
+</html> 
